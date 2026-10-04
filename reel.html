@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@500;700;800&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/pro.css?v=1">
-<link rel="stylesheet" href="css/planeta.css?v=2">
+<link rel="stylesheet" href="css/reel.css?v=1">
 </head>
 <body>
 <div class="grain" aria-hidden="true"></div>
@@ -43,21 +43,36 @@
 </div>
 
 <main>
-  <section class="hero" id="hero">
-    <canvas class="globe" id="globe" aria-label="Globo terráqueo con los proyectos de Mundoloco orbitando"></canvas>
-    <div class="cards" id="cards"></div>
-    <div class="pin-label mono" id="pinLabel" aria-hidden="true"><b>Buenos Aires</b></div>
+  <section class="reel" id="reel">
+    <div class="slides" id="slides" aria-hidden="true"></div>
+    <div class="shade" aria-hidden="true"></div>
 
-    <div class="hero-head">
-      <p class="mono kicker"><span class="dot"></span> Mundoloco CGI — Animation Studios</p>
+    <div class="reel-head">
+      <p class="mono kicker"><span class="rec"></span> Mundoloco CGI — Animation Studios</p>
       <h1>
-        <span class="line"><span data-i18n="h1a">Animación hecha en Buenos Aires,</span></span>
-        <span class="line"><span data-i18n="h1b">vista en todo el</span> <em class="mirror" data-i18n="h1c">mundo.</em></span>
+        <span class="line"><span data-i18n="r1">Películas y series animadas</span></span>
+        <span class="line"><span data-i18n="r2">que viajan por el</span> <em class="mirror" data-i18n="r3">mundo.</em></span>
       </h1>
+      <p class="reel-sub" data-i18n="rside">Estudio de animación CGI en Buenos Aires. Creadores de Metegol y de Mafalda para Netflix.</p>
+      <div class="reel-ctas">
+        <button type="button" class="btn" id="playReel"><span class="play"><svg viewBox="0 0 10 12"><path d="M0 0l10 6-10 6z"/></svg></span><span data-i18n="full">Ver reel completo</span></button>
+      </div>
     </div>
 
-    <div class="hero-meta mono">
-      <span class="hint" data-i18n="hint">Arrastrá para explorar</span>
+    <aside class="index" aria-label="Trabajos seleccionados">
+      <p class="mono index-title" data-i18n="index">Trabajos seleccionados</p>
+      <ol id="list"></ol>
+    </aside>
+
+    <div class="mobile-now" id="mobileNow">
+      <button type="button" class="now-btn" id="nowBtn"><span class="mono" id="nowType"></span><b id="nowName"></b></button>
+      <div class="dots" id="dots"></div>
+    </div>
+
+    <div class="bar mono">
+      <span id="tc">TC 00:00:00:00</span>
+      <span class="bar-mid" id="barNow"></span>
+      <span>34°36′S · 58°22′O</span>
     </div>
   </section>
 
@@ -84,7 +99,15 @@
   </div>
 </div>
 
+<div class="player" id="player" hidden>
+  <button type="button" class="modal-x" id="playerX" aria-label="Cerrar">×</button>
+  <video id="video" controls playsinline preload="none">
+    <source src="video/showreel.mp4" type="video/mp4">
+  </video>
+  <p class="player-missing mono" id="missing" hidden>[ Acá va el showreel en video — video/showreel.mp4 ]</p>
+</div>
+
 <script src="js/projects.js?v=1"></script>
-<script src="js/planeta.js?v=2"></script>
+<script src="js/reel.js?v=1"></script>
 </body>
 </html>
