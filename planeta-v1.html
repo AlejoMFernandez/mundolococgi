@@ -1,37 +1,22 @@
 <!doctype html>
-<html lang="es" class="intro-on">
+<html lang="es">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Mundoloco CGI · Animation Studios</title>
 <meta name="description" content="Mundoloco CGI — estudio de animación de Buenos Aires. Creadores de Metegol y de la serie animada de Mafalda para Netflix.">
-<meta name="theme-color" content="#03050A">
+<meta name="theme-color" content="#05080F">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@500;700;800&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="css/pro.css?v=2">
-<link rel="stylesheet" href="css/planeta.css?v=3">
+<link rel="stylesheet" href="css/pro.css?v=1">
+<link rel="stylesheet" href="css/planeta-v1.css?v=1">
 </head>
 <body>
 <div class="grain" aria-hidden="true"></div>
 
-<!-- ============ INTRO ============ -->
-<div class="intro" id="intro" aria-hidden="true">
-  <div class="bar-top"></div><div class="bar-bot"></div>
-  <div class="logo-split" id="logoSplit">
-    <img class="lp lp-left" id="lpLeft" src="img/logo-left.svg" alt="">
-    <img class="lp lp-globe" id="lpGlobe" src="img/logo-globe.svg" alt="">
-    <img class="lp lp-right" id="lpRight" src="img/logo-right.svg" alt="">
-  </div>
-  <p class="intro-sub mono" id="introSub">Animation Studios <i></i> Buenos Aires</p>
-  <p class="intro-tc mono" id="introTc">00:00:00:00</p>
-  <button type="button" class="skip mono" id="skip">Saltar intro →</button>
-</div>
-
-<!-- ============ HEADER (aparece con el scroll) ============ -->
-<header class="nav" id="nav">
-  <a href="#" class="brand" aria-label="Mundoloco CGI — inicio"><img src="img/logo-white.svg" alt="Mundoloco CGI"></a>
+<header class="nav">
+  <a href="#" class="brand" aria-label="Mundoloco CGI — inicio"><img src="img/logo-white.png" alt="Mundoloco CGI"></a>
   <nav class="nav-links" aria-label="Principal">
     <a href="#" data-i18n="nav1">Trabajos</a>
     <a href="#" data-i18n="nav2">Estudio</a>
@@ -63,9 +48,7 @@
     <div class="cards" id="cards"></div>
     <div class="pin-label mono" id="pinLabel" aria-hidden="true"><b>Buenos Aires</b></div>
 
-    <div class="hero-meta mono reveal"><span data-i18n="hint">Arrastrá para explorar</span></div>
-
-    <div class="hero-head reveal">
+    <div class="hero-head">
       <p class="mono kicker"><span class="dot"></span> Mundoloco CGI — Animation Studios</p>
       <h1>
         <span class="line"><span data-i18n="h1a">Animación hecha en Buenos Aires,</span></span>
@@ -73,7 +56,9 @@
       </h1>
     </div>
 
-    <a href="#next" class="scroll-cue mono reveal" aria-label="Scroll"><span>Scroll</span><i></i></a>
+    <div class="hero-meta mono">
+      <span class="hint" data-i18n="hint">Arrastrá para explorar</span>
+    </div>
   </section>
 
   <section class="next" id="next">
@@ -100,7 +85,6 @@
 </div>
 
 <script src="js/projects.js?v=1"></script>
-<script src="js/planeta.js?v=3"></script>
-<script src="js/intro.js?v=2"></script>
+<script src="js/planeta-v1.js?v=1"></script>
 </body>
 </html>
